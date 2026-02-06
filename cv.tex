@@ -1,6 +1,6 @@
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.7in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[hidelinks]{hyperref}
@@ -8,7 +8,7 @@
 \usepackage{titlesec}
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
+\setlength{\parskip}{1pt}
 \renewcommand{\familydefault}{\sfdefault}
 
 \titleformat{\section}
@@ -17,87 +17,62 @@
   {0pt}
   {}
 
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=1pt}
+
 \begin{document}
 
 % Header
 
 {\LARGE \textbf{Rivaldo Silalahi}}\\[2pt]
 \textit{Site Reliability Engineer / Cloud Native \& Observability}\\[4pt]
-
+Jakarta, Indonesia \quad|\quad
 \href{mailto:rivaldosilalahi13@gmail.com}{rivaldosilalahi13@gmail.com} \quad|\quad
-\href{tel:PHONE_NUMBER_PLACEHOLDER}{PHONE_NUMBER_PLACEHOLDER} \quad|\quad
-Samosir, North Sumatera, Indonesia\\
-\href{https://www.linkedin.com/in/rivaldo-silalahi/}{linkedin.com/in/rivaldo-silalahi} \quad|\quad
-\href{https://github.com/IDiot29}{github.com/IDiot29}
-
-% Summary
-
-\section*{Summary}
-
-Site Reliability Engineer with 3+ years of experience building and operating cloud-native platforms, observability stacks and AI inference infrastructure on Kubernetes (EKS, k3s), AWS and GCP. 
-Focus areas: SRE, DevSecOps, GitOps and AI infra --- designing centralized metrics/logs/traces, standardizing reliability practices and running GPU-based LLM inference with vLLM and SGLang.
-Strong bias toward automation (Terraform, NixOS, GitOps) and reducing operational toil for engineering teams.
-
-% Skills
-
-\section*{Skills}
-
-\textbf{SRE \& Observability}: Prometheus, Cortex, VictoriaMetrics, ELK, OpenTelemetry, Grafana, Loki\\
-\textbf{Cloud Native \& OS}: Linux, NixOS, Kubernetes (EKS, k3s, Kubespray), Helm, Flux, Argo CD, Docker, AWS, GCP\\
-\textbf{DevSecOps \& Platform}: Terraform, Ansible, Packer, Nix, CI/CD (Google Cloud Build, CircleCI, GitHub Actions), Git\\
-\textbf{AI Infrastructure \& Perf}: vLLM, SGLang, k6, Locust\\
-\textbf{Programming}: Go, Python, Bash, SQL, Nix
+\href{tel:PHONE_NUMBER_PLACEHOLDER}{\texttt{\detokenize{PHONE_NUMBER_PLACEHOLDER}}} \quad|\quad
+\href{https://www.linkedin.com/in/rivaldo-silalahi/}{LinkedIn} \quad|\quad
+\href{https://github.com/valdo766hi}{GitHub}
 
 % Experience
 
 \section*{Professional Experience}
 
-\textbf{Senior Site Reliability Engineer} \hfill Jul 2025 -- Present\\
-\textit{Lintasarta, Jakarta, Indonesia}
+\textbf{Lintasarta} -- Senior Site Reliability Engineer \hfill Jul 2025 -- Present
 
 \begin{itemize}[leftmargin=*]
-  \item Own the design and standardization of a centralized observability platform using Cortex (metrics), ELK stack (logs) and OpenTelemetry as the common ingestion layer for services and infrastructure.
-  \item Operate production k3s-based Kubernetes clusters dedicated to observability and shared platform components.
-  \item Build custom exporters in Go to collect metrics from NVIDIA GB200 devices via BMC and expose them to Cortex / Prometheus for GPU fleet monitoring.
-  \item Implement GitOps with Flux and Argo CD to manage observability configuration, dashboards and alerting rules declaratively.
-  \item Partner with multiple product teams to roll out common SLOs, dashboards and alerting patterns, improving incident visibility and reducing ad-hoc monitoring.
+  \item Standardized a centralized observability platform (Cortex, ELK, OpenTelemetry) and rolled out shared SLOs, dashboards, and alerts across teams.
+  \item Operated production k3s clusters for observability and shared platform components, maintaining reliability for critical monitoring workloads.
+  \item Built Go-based exporters for NVIDIA GB200 BMC telemetry to enable GPU fleet monitoring in Cortex/Prometheus.
+  \item Implemented GitOps (Flux, Argo CD) for dashboards, alerts, and configuration, enabling consistent and auditable changes.
 \end{itemize}
 
-\textbf{Site Reliability Engineer} \hfill Nov 2022 -- Jun 2025\\
-\textit{GDP Labs, Jakarta, Indonesia}
+\textbf{GDP Labs} -- Site Reliability Engineer \hfill Nov 2022 -- Jun 2025
 
 \begin{itemize}[leftmargin=*]
-  \item Provisioned cloud infrastructure on AWS and GCP using Terraform, Ansible and Packer, enabling reproducible environments for internal and client workloads.
-  \item Operated Kubernetes clusters (EKS, Kubespray) and container workloads (Docker) for microservices and platform components.
-  \item Built and maintained CI/CD pipelines with Google Cloud Build and complementary tooling, automating build, test and deployment workflows.
-  \item Deployed and ran GPU-based LLM inference servers using vLLM and SGLang, and executed benchmark tests with k6 to evaluate model and inference server performance.
-  \item Implemented and evolved monitoring and logging stacks (Prometheus, ELK, Grafana) to reduce MTTR and improve incident investigation.
+  \item Provisioned AWS/GCP infrastructure with Terraform, Ansible, and Packer to deliver reproducible environments for internal and client workloads.
+  \item Operated Kubernetes clusters (EKS, Kubespray) and container workloads for microservices and platform components.
+  \item Automated CI/CD with Google Cloud Build and maintained monitoring/logging (Prometheus, ELK, Grafana) to improve incident response.
+  \item Deployed GPU-based LLM inference (vLLM, SGLang) and ran k6 benchmarks to assess throughput and latency.
 \end{itemize}
 
-\textbf{Site Reliability Engineer Intern} \hfill Jun 2022 -- Aug 2022\\
-\textit{GDP Labs, Jakarta, Indonesia}
+\textbf{GDP Labs} -- Site Reliability Engineer Intern \hfill Jun 2022 -- Aug 2022
 
 \begin{itemize}[leftmargin=*]
-  \item Automated infrastructure provisioning using Terraform and Brainboard to standardize environment creation across projects.
-  \item Built CI/CD pipelines with Google Cloud Build to decrease manual deployment effort for engineering teams.
-  \item Deployed VictoriaMetrics as time-series storage for metrics to support high-availability monitoring.
+  \item Automated infrastructure provisioning with Terraform and Brainboard to standardize environment creation.
+  \item Built CI/CD pipelines with Google Cloud Build and deployed VictoriaMetrics for high-availability monitoring.
 \end{itemize}
 
-\textbf{Backend Engineer Student} \hfill Feb 2022 -- Jun 2022\\
-\textit{Generasi Gigih}
+\textbf{Generasi Gigih} -- Backend Engineer Student \hfill Feb 2022 -- Jun 2022
 
 \begin{itemize}[leftmargin=*]
-  \item Completed an intensive backend program focused on Ruby, Ruby on Rails, OOP, clean code and SOLID principles.
-  \item Applied unit testing, TDD and basic system design to build a backend application on Ruby on Rails.
+  \item Completed an intensive backend program (Ruby, Rails) and applied TDD and basic system design in a Rails application.
 \end{itemize}
 
-\textbf{DevOps Engineer Intern} \hfill Oct 2021 -- Jan 2022\\
-\textit{Finku, Jakarta, Indonesia}
+\textbf{Finku} -- DevOps Engineer Intern \hfill Oct 2021 -- Jan 2022
 
 \begin{itemize}[leftmargin=*]
-  \item Implemented CI/CD pipelines on CircleCI for backend services to streamline build and deployment.
-  \item Performed load testing with k6 to validate the performance of critical API endpoints.
-  \item Built Grafana dashboards on top of Elasticsearch to give engineers real-time visibility into application behavior.
+  \item Implemented CircleCI pipelines for backend services to streamline build and deployment.
+  \item Performed k6 load testing to validate performance of critical API endpoints.
+  \item Built Grafana dashboards on Elasticsearch for real-time application visibility.
 \end{itemize}
 
 % Education
@@ -109,5 +84,20 @@ Strong bias toward automation (Terraform, NixOS, GitOps) and reducing operationa
 
 \textbf{Associate Degree (D3), Computer Technology} \hfill 2019 -- 2022\\
 \textit{Del Institute of Technology, Indonesia}
+
+% Certifications
+
+\section*{Certifications}
+
+\href{https://www.credly.com/badges/3e46e59e-33dc-4829-a42d-085a9e196dd8}{\textbf{CKA (Certified Kubernetes Administrator)} \;\textit{(LF-dmkszzfkh7)}}
+
+% Skills
+
+\section*{Skills}
+
+\textbf{Languages}: Go, Python, Bash, SQL, Nix\\
+\textbf{Platforms}: Linux, NixOS, Kubernetes (EKS, k3s, Kubespray), AWS, GCP\\
+\textbf{Observability}: Prometheus, Cortex, VictoriaMetrics, ELK, OpenTelemetry, Grafana, Loki\\
+\textbf{DevOps}: Terraform, Ansible, Packer, Helm, Flux, Argo CD, Docker, CI/CD (Google Cloud Build, CircleCI, GitHub Actions)
 
 \end{document}
