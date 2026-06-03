@@ -38,6 +38,8 @@
           latexmk
           geometry
           hyperref
+          mlmodern
+          collection-latexrecommended
           enumitem
           titlesec
           ;
